@@ -23,7 +23,7 @@ try:
 except ImportError:
     Fore = Style = colorama_init = None
 
-__version__ = "2.0"
+__version__ = "2.1"
 
 # ============================================================
 #  Appearance - colorama house palette
@@ -1031,4 +1031,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    from core.remote_control import RemoteControl
+
+    with RemoteControl(tool_id="decodex"):
+        main()
